@@ -48,7 +48,7 @@ $addressFrom = '15 Hawkins Road Morganville NJ 07751';
 $addressTo   = $_POST['to'];
 $formattedAddrFrom    = str_replace(' ', '+', $addressFrom);
 $formattedAddrTo     = str_replace(' ', '+', $addressTo);
-$apiKey = 'AIzaSyAxX3JnyJbkZMQyklxtsznC6Q983K_rWp4';
+$apiKey = 'GOOGLEMAPSAPIKEY';
 $distance =     file_get_contents('https://maps.googleapis.com/maps/api/distancematrix/json?origins='.$formattedAddrFrom.'&destinations='.$formattedAddrTo.'&units=imperial&key='.$apiKey);
 $obj = json_decode($distance, true);
 $del = $obj['rows'][0]['elements'][0]['distance']['text'];
